@@ -14,6 +14,10 @@
 		58BB7073219F7E0400B71EE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58BB7071219F7E0400B71EE2 /* LaunchScreen.storyboard */; };
 		58BB707E219F7E0500B71EE2 /* Toy2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BB707D219F7E0500B71EE2 /* Toy2Tests.swift */; };
 		58BB7089219F7E0500B71EE2 /* Toy2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BB7088219F7E0500B71EE2 /* Toy2UITests.swift */; };
+		58CA9C9421A9EE26002DB369 /* CatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA9C9321A9EE26002DB369 /* CatTableViewController.swift */; };
+		58CA9C9621A9EE49002DB369 /* CatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA9C9521A9EE49002DB369 /* CatTableViewCell.swift */; };
+		58CA9C9921A9FF43002DB369 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA9C9821A9FF43002DB369 /* Cat.swift */; };
+		58CA9C9B21AA07B2002DB369 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA9C9A21AA07B2002DB369 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		58BB7084219F7E0500B71EE2 /* Toy2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Toy2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58BB7088219F7E0500B71EE2 /* Toy2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toy2UITests.swift; sourceTree = "<group>"; };
 		58BB708A219F7E0500B71EE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58CA9C9321A9EE26002DB369 /* CatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatTableViewController.swift; sourceTree = "<group>"; };
+		58CA9C9521A9EE49002DB369 /* CatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatTableViewCell.swift; sourceTree = "<group>"; };
+		58CA9C9821A9FF43002DB369 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		58CA9C9A21AA07B2002DB369 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,10 @@
 			children = (
 				58BB7068219F7DFE00B71EE2 /* AppDelegate.swift */,
 				58BB706A219F7DFE00B71EE2 /* ViewController.swift */,
+				58CA9C9321A9EE26002DB369 /* CatTableViewController.swift */,
+				58CA9C9A21AA07B2002DB369 /* DetailViewController.swift */,
+				58CA9C9521A9EE49002DB369 /* CatTableViewCell.swift */,
+				58CA9C9721A9FF14002DB369 /* Models */,
 				58BB706C219F7DFE00B71EE2 /* Main.storyboard */,
 				58BB706F219F7E0400B71EE2 /* Assets.xcassets */,
 				58BB7071219F7E0400B71EE2 /* LaunchScreen.storyboard */,
@@ -123,6 +135,14 @@
 				58BB708A219F7E0500B71EE2 /* Info.plist */,
 			);
 			path = Toy2UITests;
+			sourceTree = "<group>";
+		};
+		58CA9C9721A9FF14002DB369 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				58CA9C9821A9FF43002DB369 /* Cat.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +276,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58CA9C9621A9EE49002DB369 /* CatTableViewCell.swift in Sources */,
 				58BB706B219F7DFE00B71EE2 /* ViewController.swift in Sources */,
+				58CA9C9921A9FF43002DB369 /* Cat.swift in Sources */,
+				58CA9C9B21AA07B2002DB369 /* DetailViewController.swift in Sources */,
+				58CA9C9421A9EE26002DB369 /* CatTableViewController.swift in Sources */,
 				58BB7069219F7DFE00B71EE2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

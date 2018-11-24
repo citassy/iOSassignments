@@ -78,6 +78,15 @@ class ViewController: UIViewController {
         else{
             enterSubmitMode()
         }
+        
+        if (Cat.count == 0){
+            Cat.addCat(name: "Alice", age: 1, image: #imageLiteral(resourceName: "cat1"), type: "British Shorthair")
+            Cat.addCat(name: "Bob", age: 2, image: #imageLiteral(resourceName: "cat2"), type: "American Shorthair")
+            Cat.addCat(name: "Karen", age: 4, image: #imageLiteral(resourceName: "cat3"), type: "American Shorthair")
+
+
+
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
 
