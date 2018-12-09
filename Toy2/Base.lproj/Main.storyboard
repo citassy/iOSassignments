@@ -93,7 +93,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Cats Log" id="EOX-Tv-CCt"/>
+                    <navigationItem key="navigationItem" title="Cats Log" id="EOX-Tv-CCt">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Sbf-Or-Nl4">
+                            <connections>
+                                <segue destination="DEK-7x-9uZ" kind="presentation" id="sOQ-v7-KeC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="ClassLabel" destination="dGF-5m-Hn7" id="J1d-4S-NSU"/>
                         <outlet property="ClassTextField" destination="13p-N2-7B3" id="UrA-WF-CyK"/>
@@ -228,6 +234,101 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hjS-od-sSX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
+        </scene>
+        <!--Add Cat-->
+        <scene sceneID="iws-Ae-7hp">
+            <objects>
+                <viewController id="tuV-57-vYX" customClass="AddCatViewController" customModule="Toy2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q61-rB-pYf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dYG-x9-jPa">
+                                <rect key="frame" x="67" y="159" width="240" height="280"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddCatCell" rowHeight="174" id="uIT-AJ-Yiq" customClass="AddCatTableViewCell" customModule="Toy2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="240" height="174"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uIT-AJ-Yiq" id="LbV-Ux-CUW">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="173.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ptu-pj-dNh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="173.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Cf-ie-FKm">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="173.5"/>
+                                                </pickerView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="3Cf-ie-FKm" secondAttribute="trailing" id="000-JV-bZg"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ptu-pj-dNh" secondAttribute="bottom" id="T1n-uZ-Saj"/>
+                                                <constraint firstAttribute="bottom" secondItem="3Cf-ie-FKm" secondAttribute="bottom" id="XPr-k6-3fZ"/>
+                                                <constraint firstItem="3Cf-ie-FKm" firstAttribute="leading" secondItem="LbV-Ux-CUW" secondAttribute="leading" id="aSd-iq-bO5"/>
+                                                <constraint firstItem="3Cf-ie-FKm" firstAttribute="top" secondItem="LbV-Ux-CUW" secondAttribute="top" id="arT-8R-9FC"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ptu-pj-dNh" secondAttribute="trailing" id="fOz-au-RQf"/>
+                                                <constraint firstItem="Ptu-pj-dNh" firstAttribute="leading" secondItem="LbV-Ux-CUW" secondAttribute="leading" id="jAF-ow-FiS"/>
+                                                <constraint firstItem="Ptu-pj-dNh" firstAttribute="top" secondItem="LbV-Ux-CUW" secondAttribute="top" id="pAr-nK-Faf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="PickerView" destination="3Cf-ie-FKm" id="0o1-Ba-udp"/>
+                                            <outlet property="TextView" destination="Ptu-pj-dNh" id="PzR-a2-mp9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2EJ-0h-cSM" firstAttribute="trailing" secondItem="dYG-x9-jPa" secondAttribute="trailing" constant="68" id="hVt-3n-xB5"/>
+                            <constraint firstItem="dYG-x9-jPa" firstAttribute="top" secondItem="2EJ-0h-cSM" secondAttribute="top" constant="95" id="kBy-NC-sSf"/>
+                            <constraint firstItem="dYG-x9-jPa" firstAttribute="leading" secondItem="2EJ-0h-cSM" secondAttribute="leading" constant="67" id="zEX-Eg-rVT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2EJ-0h-cSM"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Cat" id="qW0-Uc-Ije">
+                        <barButtonItem key="leftBarButtonItem" title="Clear" id="GX0-FP-0XH">
+                            <connections>
+                                <action selector="ClearButtonTapped:" destination="tuV-57-vYX" id="yVW-NW-iPu"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="JC5-cB-xXX">
+                            <connections>
+                                <action selector="DoneButtonTapped:" destination="tuV-57-vYX" id="OoT-Zs-JPe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="DoneButton" destination="JC5-cB-xXX" id="w81-Uq-Xsr"/>
+                        <outlet property="TableView" destination="dYG-x9-jPa" id="9Oq-oC-FRg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iX9-4x-myO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1744.8" y="823.53823088455783"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8DU-fc-MfH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DEK-7x-9uZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HNo-0p-XAH">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tuV-57-vYX" kind="relationship" relationship="rootViewController" id="zxk-m0-5OF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Gr-3j-6Ts" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="993" y="824"/>
         </scene>
     </scenes>
 </document>

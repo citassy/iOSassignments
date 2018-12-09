@@ -8,6 +8,16 @@
 
 import UIKit
 
+extension UIViewController{
+    func dismissKeyBoardWhenTappingAround(){
+        let tap : UITapGestureRecognizer = UITapGestureRecognizer (target: self, action: #selector(UIViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard(){
+        view.endEditing(false)
+    }
+}
 class ViewController: UIViewController {
     
     var submitted : Bool = false
@@ -67,6 +77,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        dismissKeyBoardWhenTappingAround()
         if(UserDefaults.standard.object(forKey: "name") != nil
             &&
             UserDefaults.standard.object(forKey: "class") != nil) {
